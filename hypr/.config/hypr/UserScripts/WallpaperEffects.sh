@@ -76,7 +76,7 @@ main() {
             # Apply selected effect
             notify-send -u normal -i "$iDIR/ja.png"  "Applying:" "$choice effects"
             eval "${effects[$choice]}"
-
+            
             # intial kill process
             for pid in swaybg mpvpaper; do
             killall -SIGUSR1 "$pid"
@@ -86,7 +86,7 @@ main() {
             swww img -o "$focused_monitor" "$wallpaper_output" $SWWW_PARAMS &
 
             sleep 2
-
+  
             wallust run "$wallpaper_output" -s &
             sleep 1
             # Refresh rofi, waybar, wallust palettes
@@ -141,8 +141,8 @@ if [[ -n "$choice" ]]; then
           exit 1
         fi
 
-      # fi
-    fi
         exec "$SCRIPTSDIR/sddm_wallpaper.sh" --effects
+      fi
+    fi
   fi
 fi

@@ -21,7 +21,7 @@ source ~/.zsh/zsh-completions/zsh-completions.plugin.zsh
 # >> Tools Init
 # ========================
 eval "$(starship init zsh)"
-eval "$(zoxide init zsh)"
+#eval "$(zoxide init zsh)"
 eval "$(fzf --zsh)"
 
 # bun completions
